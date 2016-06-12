@@ -87,7 +87,7 @@ namespace StationScience
                             nstars += crew.experienceLevel;
                         }
                     }
-                    SetEfficiencyBonus((float)(nsci + nstars * experienceBonus));
+                    SetEfficiencyBonus((float)Math.Max(nsci + nstars * experienceBonus, 1.0));
                 }
             }
             base.PreProcessing();
